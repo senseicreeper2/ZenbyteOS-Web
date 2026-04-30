@@ -14,7 +14,7 @@
     .ButtonstyleHeader {
     width: 150px;
     height: auto;
-    min-height: 35px;
+    min-height: 45px;
     padding: 8px;
     border-radius: 10px;
     background: #12001a00;
@@ -40,7 +40,7 @@
         /*Style of the Buttons*/
         .ButtonstyleDownloads {
     width: 180px;
-    height: 55px;
+    height: 62px;
     border-radius: 10px;
     background: rgba(82, 82, 82, 0);
     color: #9b59b6;
@@ -65,7 +65,7 @@
     .dropdown-content {
         display: none;
         position: fixed;
-        top: 6.5%;
+        top: 8.8%;
         left: 0;
         background: #1e0033;
         border: 0px solid #9b59b6;
@@ -103,7 +103,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
 </head>
 <body style="margin: 0px;
@@ -132,19 +132,14 @@ z-index: 999;">
     gap: 10px;">
 
         <form action="file:///C:/Users/colin/AppData/Roaming/obs-studio/plugin_manager/CronoDevelopmentWebsite.html">
-        <button type="submit" 
-        style="width: 200px;
-        height: 60px;
-        background: transparent;
-        cursor: pointer;
-        border: 0px;
-        font-weight: bolder;
-        font-size: 1.5rem;
-        color: #9b59b6;
-        font-family: 'Orbitron', 'sans-serif';">
-        Zenbyte-OS
-        </button>
-      </form>
+    <button type="submit" 
+    style="background: transparent;
+    cursor: pointer;
+    border: 0px;
+    padding: 0;">
+        <img src="ZenbyteOSLogo.png" style="height: 80px; width: auto;">
+    </button>
+</form>
 
 
       <div class="dropdown-wrapper">  
@@ -158,8 +153,8 @@ z-index: 999;">
         <a href="#" style="font-size: 0.75rem; color: #9b59b6;">/*Text Einfügen über Zenbyte*/
             <span style="display: block; font-size: 0.75rem; color: #9b59b6;"></span>
         </a>
-        <a href="https://github.com/Olivenda/Zenbyte-OS">Zenbyte-OS Github
-            <span style="display: block; font-size: 0.75rem; color: #9b59b6;"></span>
+        <a href="https://github.com/Olivenda/Zenbyte-OS"><i class="fa-brands fa-github" style="font-size: 4rem;"></i>Zenbyte-OS Repository
+            <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Github</span>
         </a>
       </div>
 
@@ -171,20 +166,20 @@ z-index: 999;">
         <button type="submit" class="ButtonstyleHeader">Releases</button>      
         </form>
         <div class="dropdown-content">
-            <a href="https://zbpm.cronodevelopment.com/ZenbyteOS-1.0.iso">Latest Beta
-                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 2.0 Beta</span>
-            </a>
-            <a href="#">Latest Stable
-                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.0 Stable</span>
-            </a>
-            <a href="#">Latest Hotfix
+            <a href="#"><i class="fa-solid fa-download"></i> Latest Beta
                 <span style="display: block; font-size: 0.75rem; color: #9b59b6;">NA</span>
             </a>
-            <a href="#">Latest Experimental
+            <a href="#"><i class="fa-solid fa-download"></i> Latest Stable
                 <span style="display: block; font-size: 0.75rem; color: #9b59b6;">NA</span>
             </a>
-            <a href="#">Latest (Spin Name)
-                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.0 (SpinName)</span>
+            <a href="#"><i class="fa-solid fa-download"></i> Latest Hotfix
+                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">NA</span>
+            </a>
+            <a href="https://zbpm.cronodevelopment.com/ZenbyteOS-1.0.iso"><i class="fa-solid fa-download"></i> Latest Experimental
+                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 0.9xe</span>
+            </a>
+            <a href="#"><i class="fa-solid fa-download"></i> Latest (Spin Name)
+                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">NA</span>
             </a>
         </div>
     </div>
@@ -232,14 +227,14 @@ min-height: 1400px;">
     <form action="https://zbpm.cronodevelopment.com/ZenbyteOS-1.0.iso">
       <button type="submit" 
       class="ButtonstyleDownloads">
-        Zenbyte-OS 1.0
+        <i class="fa-solid fa-download"></i> Zenbyte OS 1.0
       </button>
     </form>
 
     <form action="https://github.com/Olivenda/Zenbyte-OS">
       <button type="submit" 
       class="ButtonstyleDownloads">
-        Zenbyte-OS Github
+        <i class="fa-brands fa-github"></i> Zenbyte-OS Github
       </button>
     </form>
   </div>
