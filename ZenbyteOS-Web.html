@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        ul {list-style: none;
+            margin: 40px 0;
+        }
+        li {
+            float: left;
+        }
+        /*Style of the Buttons*/
+    .ButtonstyleHeader {
+    width: 150px;
+    height: auto;
+    min-height: 35px;
+    padding: 8px;
+    border-radius: 10px;
+    background: #12001a00;
+    color: #9b59b6;
+    border: 0px solid #ebbc5500;
+    cursor: pointer;
+}
+
+    .ButtonstyleHeader:hover {
+    background: #12001a;
+    border: 0px solid #ffffff;
+    color: #ffffff;
+}
+    </style>
+        <style>
+        ul {list-style: none;
+            margin: 40px 0;
+        }
+        li {
+            float: left;
+        }
+        
+        /*Style of the Buttons*/
+        .ButtonstyleDownloads {
+    width: 180px;
+    height: 55px;
+    border-radius: 10px;
+    background: rgba(82, 82, 82, 0);
+    color: #9b59b6;
+    border: 2px solid #25252500;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.ButtonstyleDownloads:hover {
+    background: #1e0033;
+    border: 2px solid rgba(100, 100, 100, 0);
+    color: rgb(255, 255, 255);
+}
+
+.dropdown-wrapper {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        height: auto;
+    }
+    .dropdown-content {
+        display: none;
+        position: fixed;
+        top: 6.5%;
+        left: 0;
+        background: #1e0033;
+        border: 0px solid #9b59b6;
+        border-radius: 10px;
+        padding: 10px;
+        width: 100vw;
+        min-width: 200px;
+        z-index: 1000;
+        box-sizing: border-box;
+        height: auto;
+        max-height: 500px;
+    }
+    .dropdown-wrapper:hover > .dropdown-content { 
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: flex-start;
+        padding: 20px 20px; 
+    }
+    .dropdown-content a { 
+        display: block; 
+        color: #9b59b6; 
+        padding: 12px 8px; 
+        text-decoration: none;
+        font-size: 1.3rem;
+        height: auto;
+        min-height: 50px;
+        width: 300px;
+    }
+    .dropdown-content a:hover { 
+        background: #12001a; 
+        border-radius: 6px; 
+        }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+    
+</head>
+<body style="margin: 0px;
+padding: 0px;">
+
+<div style="background: #1e0033;
+padding: 10px 40px;
+min-height: 20px;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+box-sizing: border-box;
+z-index: 999;">
+
+
+
+
+  <!-- Header mit Titel und Navigation -->
+  <div style="display: flex; 
+  align-items: center; 
+  gap: 60px;">
+
+    <div style="display: flex;
+    align-items: center;
+    gap: 10px;">
+
+        <form action="file:///C:/Users/colin/AppData/Roaming/obs-studio/plugin_manager/CronoDevelopmentWebsite.html">
+        <button type="submit" 
+        style="width: 200px;
+        height: 60px;
+        background: transparent;
+        cursor: pointer;
+        border: 0px;
+        font-weight: bolder;
+        font-size: 1.5rem;
+        color: #9b59b6;
+        font-family: 'Orbitron', 'sans-serif';">
+        Zenbyte-OS
+        </button>
+      </form>
+
+
+      <div class="dropdown-wrapper">  
+      <form action="About Zenbyte-OS link">
+        <button type="submit" 
+        class="ButtonstyleHeader">
+          About Zenbyte-OS
+        </button>
+      </form>
+      <div class="dropdown-content">
+        <a href="#" style="font-size: 0.75rem; color: #9b59b6;">/*Text Einfügen über Zenbyte*/
+            <span style="display: block; font-size: 0.75rem; color: #9b59b6;"></span>
+        </a>
+        <a href="https://github.com/Olivenda/Zenbyte-OS">Zenbyte-OS Github
+            <span style="display: block; font-size: 0.75rem; color: #9b59b6;"></span>
+        </a>
+      </div>
+
+    </div>
+
+
+        <div class="dropdown-wrapper">
+        <form action="Releases Link">
+        <button type="submit" class="ButtonstyleHeader">Releases</button>      
+        </form>
+        <div class="dropdown-content">
+            <a href="https://zbpm.cronodevelopment.com/ZenbyteOS-1.0.iso">Latest Beta
+                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 2.0 Beta</span>
+            </a>
+            <a href="#">Latest Stable
+                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.0 Stable</span>
+            </a>
+            <a href="#">Latest Hotfix
+                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">NA</span>
+            </a>
+            <a href="#">Latest Experimental
+                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.0x</span>
+            </a>
+            <a href="#">Latest (Spin Name)
+                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.0 (SpinName)</span>
+            </a>
+        </div>
+    </div>
+
+        <div class="dropdown-wrapper">
+        <form action="DOCS link">
+        <button type="submit" class="ButtonstyleHeader">DOCS</button>
+      </form>
+      <div class="dropdown-content">
+        <a href="#" style="font-size: 1.6rem;">Patchnotes 
+        <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.0</span>
+            <span style="display: block; font-size: 1rem; color: #9b59b6;">
+                <ul style="list-style: disc; padding-left: 15px;">
+                    <li style="float: none;">LightDM Fix</li>
+                    <li style="float: none;">ZBPM Updated</li>
+                    <li style="float: none;">New Installer UI</li>
+                    <li style="float: none;">New ZBPM UI</li>
+                    <li style="float: none;">Bugfixes</li>
+                    <li style="float: none;">Kernerl Panic on Exit fix</li>
+                    <li style="float: none;">SSHD Failure Fixed</li>
+                    <li style="float: none;">Intel Driver Support</li>
+                </ul>
+            </span>
+        </a>
+      </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+  <div style="background: #12001a;
+padding: 80px 30px;
+min-height: 1400px;">
+
+  <!-- Downloads Bereich -->
+  <h2 style="font: bolder;
+  font-size: xx-large;
+  color: #9b59b6;">
+  Latest Stable Releases</h2>
+
+  <div style="display: flex; gap: 10px; flex-direction: column;">
+    <form action="https://zbpm.cronodevelopment.com/ZenbyteOS-1.0.iso">
+      <button type="submit" 
+      class="ButtonstyleDownloads">
+        Zenbyte-OS 1.0
+      </button>
+    </form>
+
+    <form action="https://github.com/Olivenda/Zenbyte-OS">
+      <button type="submit" 
+      class="ButtonstyleDownloads">
+        Zenbyte-OS Github
+      </button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
