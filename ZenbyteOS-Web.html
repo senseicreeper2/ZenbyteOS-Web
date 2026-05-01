@@ -1,116 +1,138 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZenbyteOS</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        ul {
-            list-style: none;
-            margin: 40px 0;
-        }
-        
-        li {
-            float: left;
-        }
-
-        .ButtonstyleHeader {
-            width: 150px;
-            height: auto;
-            min-height: 2.8rem;
-            padding: 0.5rem;
-            border-radius: 0.625rem;
-            background: #1e0033;
-            color: #9b59b6;
-            border: 0px solid #9b59b6;
-            cursor: pointer;
-        }
-
-        .ButtonstyleHeader:hover {
-            background: #1e0033; 
-            border: 0px solid #ffffff;
-            color: #ffffff;
-        }
-
-        ul {
-            list-style: none;
-            margin: 40px 0;
-        }
-
-        li {
-            float: left;
-        }
-            
-        .ButtonstyleDownloads {
-            width: 180px;
-            height: 4rem;
-            border-radius: 0.625rem;
-            background: rgba(82, 82, 82, 0);
-            color: #9b59b6;
-            border: 2px solid #25252500;
-            cursor: pointer;
-            font-weight: bolder;
-            font-size: 1rem;
-        }
-
-        .ButtonstyleDownloads:hover {
-            background: #1e0033;
-            border: 2px solid rgba(100, 100, 100, 0);
-            color: rgb(255, 255, 255);
-    }
-
-        .dropdown-wrapper {
-            position: relative;
-            display: inline-block;
-            vertical-align: middle;
-            height: auto;
-        }
-        .dropdown-content {
-            display: none;
-            position: fixed;
-            top: 4.7rem;
-            left: 0;
-            background: #1e0033;
-            border: 1px solid #25252500;
-            border-radius: 10px;
-            padding: 0.625rem;
-            width: 100vw;
-            min-width: 12.5rem;
-            z-index: 1000;
-            box-sizing: border-box;
-            height: auto;
-        }
-        .dropdown-wrapper:hover > .dropdown-content { 
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            align-items: flex-start;
-            padding: 20px 20px; 
-        }
-        .dropdown-content a { 
-            display: block; 
-            color: #f7d7f7; 
-            padding: 0.75rem 0.5rem; 
-            text-decoration: none;
-            font-size: 1.3rem;
-            height: auto;
-            min-height: 3.125rem;
-            width: 18.75rem;
-        }
-        .dropdown-content a:hover { 
-            background: #12001a; 
-            border-radius: 6px; 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ZenbyteOS</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <style>
+            ul {
+                list-style: none;
+                margin: 40px 0;
             }
             
-        :root {
-                color-scheme: dark;
-                color: #e3d5ff;
-                background: #0f071a;
-                font-family: 'Orbitron', sans-serif;
-                font-size: 16px;
+            li {
+                float: left;
+            }
+
+            .ButtonstyleHeader {
+                width: 150px;
+                height: auto;
+                min-height: 2.8rem;
+                padding: 0.5rem;
+                border-radius: 0.625rem;
+                background: #1e003300;
+                color: #9b59b6;
+                border: 0px solid #9b59b6;
+                cursor: pointer;
+            }
+
+            .ButtonstyleHeader:hover {
+                background: #1e0033; 
+                border: px solid #ffffff;
+                color: #ffffff;
+                transition: 0.2s ease;
+                padding-bottom: 3.5rem;
+            }
+
+            .ButtonstyleAboutZenbyte {
+                width: 150px;
+                height: auto;
+                min-height: 2.8rem;
+                padding: 0.5rem;
+                border-radius: 0.625rem;
+                background: #1e003300;
+                color: #9b59b6;
+                border: 0px solid #9b59b6;
+                cursor: pointer;
+            }
+
+            .ButtonstyleAboutZenbyte:hover {
+                background: #1e0033; 
+                border: px solid #ffffff;
+                color: #ffffff;
+                transition: 0.2s ease;
+                padding-bottom: 2.25rem;
+            }
+
+            ul {
+                list-style: none;
+                margin: 40px 0;
+            }
+
+            li {
+                float: left;
+            }
+                
+            .ButtonstyleDownloads {
+                width: 180px;
+                height: 4rem;
+                border-radius: 0.625rem;
+                background: rgba(82, 82, 82, 0);
+                color: #9b59b6;
+                border: 2px solid #25252500;
+                cursor: pointer;
+                font-weight: bolder;
+                font-size: 1rem;
+            }
+
+            .ButtonstyleDownloads:hover {
+                background: #1e0033;
+                border: 2px solid rgba(100, 100, 100, 0);
+                color: rgb(255, 255, 255);
+            }
+
+            .dropdown-wrapper {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                height: auto;
+            }
+            .dropdown-content {
+                display: none;
+                position: fixed;
+                top: 4.7rem;
+                left: 0;
+                background: #1e0033;
+                border: 1px solid #25252500;
+                border-radius: 10px;
+                padding: 0.625rem;
+                width: 100vw;
+                min-width: 12.5rem;
+                z-index: 1000;
+                box-sizing: border-box;
+                height: auto;
+            }
+            .dropdown-wrapper:hover > .dropdown-content { 
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                align-items: flex-start;
+                padding: 20px 20px;
+            }
+            .dropdown-content a { 
+                display: block; 
+                color: #f7d7f7; 
+                padding: 0.75rem 0.5rem; 
+                text-decoration: none;
+                font-size: 1.3rem;
+                height: auto;
+                min-height: 3.125rem;
+                width: 18.75rem;
+            }
+            .dropdown-content a:hover { 
+                background: #12001a; 
+                border-radius: 6px; 
+            }
+                
+            :root {
+                    color-scheme: dark;
+                    color: #e3d5ff;
+                    background: #0f071a;
+                    font-family: 'Orbitron', sans-serif;
+                    font-size: 16px;
             }
 
             * {
@@ -355,237 +377,215 @@
                     justify-content: start;
                 }
             }
-    </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+    <body style="margin: 0px;
+    padding: 0px;">
 
+        <div style="position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(18, 0, 26, 0.95);
+        border-bottom: 1px solid rgba(155, 89, 182, 0.2);
+        z-index: 999;">
+            
+            <div style="display: flex; 
+            align-items: center; 
+            gap: 60px;">
 
-<body style="margin: 0px;
-padding: 0px;">
+                <div style="display: flex;
+                align-items: center;
+                gap: 10px;">
 
-<div style="background: #1e0033;
-padding: 10px 40px;
-min-height: 20px;
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-box-sizing: border-box;
-z-index: 999;">
+                    <form action="ZenbyteOS-Web.html">
+                        <button type="submit" 
+                        style="background: transparent;
+                        cursor: pointer;
+                        border: 0px;
+                        padding: 0;">
 
+                            <img src="ZenbyteOSLogo.png" style="height: 80px; width: auto;">
+                        </button>
+                    </form>
+                    <div class="dropdown-wrapper">  
+                        <form action="#">
+                            <button type="submit" 
+                            class="ButtonstyleAboutZenbyte">
+                            About Zenbyte-OS
+                            </button>
+                        </form>
+                        <div class="dropdown-content">
+                            <a href="#" style="font-size: 0.75rem; color: #9b59b6;">/*Text Einfügen über Zenbyte*/
+                                <span style="display: block; font-size: 0.75rem; color: #9b59b6;"></span>
+                            </a>
+                            <a href="https://github.com/Olivenda/Zenbyte-OS"><i class="fa-brands fa-github" style="font-size: 4rem;"></i>Zenbyte-OS Repository
+                                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Github</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown-wrapper">
+                        <form action="ZenbyteOS-Release.html">
+                            <button type="submit" class="ButtonstyleHeader">Releases</button>      
+                        </form>
 
-
-
-  <div style="display: flex; 
-  align-items: center; 
-  gap: 60px;">
-
-    <div style="display: flex;
-    align-items: center;
-    gap: 10px;">
-
-        <form action="ZenbyteOS-Web.html">
-    <button type="submit" 
-    style="background: transparent;
-    cursor: pointer;
-    border: 0px;
-    padding: 0;">
-        <img src="ZenbyteOSLogo.png" style="height: 80px; width: auto;">
-    </button>
-</form>
-
-
-      <div class="dropdown-wrapper">  
-      <form action="#">
-        <button type="submit" 
-        class="ButtonstyleHeader">
-          About Zenbyte-OS
-        </button>
-      </form>
-      <div class="dropdown-content">
-        <a href="#" style="font-size: 0.75rem; color: #9b59b6;">/*Text Einfügen über Zenbyte*/
-            <span style="display: block; font-size: 0.75rem; color: #9b59b6;"></span>
-        </a>
-        <a href="https://github.com/Olivenda/Zenbyte-OS"><i class="fa-brands fa-github" style="font-size: 4rem;"></i>Zenbyte-OS Repository
-            <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Github</span>
-        </a>
-      </div>
-
-    </div>
-
-
-        <div class="dropdown-wrapper">
-        <form action="ZenbyteOS-Release.html">
-        <button type="submit" class="ButtonstyleHeader">Releases</button>      
-        </form>
-        <div class="dropdown-content">
-            <a href="https://zbpm.cronodevelopment.com/ZenbyteOS-2.0b.iso"><i class="fa-solid fa-download"></i> Latest Beta
-                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 2.0b</span>
-            </a>
-            <a href="https://zbpm.cronodevelopment.com/ZenbyteOS-1.0.iso"><i class="fa-solid fa-download"></i> Latest Stable
-                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.0</span>
-            </a>
-            <a href="https://zbpm.cronodevelopment.com/ZenbyteOS-1.0hf.iso"><i class="fa-solid fa-download"></i> Latest Hotfix
-                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.0hf</span>
-            </a>
-            <a href="https://zbpm.cronodevelopment.com/ZenbyteOS-1.1le.iso"><i class="fa-solid fa-download"></i> Latest Experimental
-                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.1le</span>
-            </a>
-            <a href="#"><i class="fa-solid fa-download"></i> Latest (Spin Name)
-                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">NA</span>
-            </a>
-        </div>
-    </div>
-
-        <div class="dropdown-wrapper">
-        <form action="ZenbyteOS-Release.html#info">
-        <form action="ZenbyteOS-Patchnotes.html">
-        <button type="submit" class="ButtonstyleHeader">DOCS</button>
-      </form>
-      <div class="dropdown-content">
-
-        <a href="#" style="font-size: 1.6rem;">Patchnotes Stable
-        <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.0</span>
-            <span style="display: block; font-size: 1rem; color: #9b59b6;">
-                <ul style="list-style: disc; padding-left: 15px;">
-                    <li style="float: none;">LXDM Fix</li>
-                    <li style="float: none;">ZBPM Updated</li>
-                    <li style="float: none;">New Installer UI</li>
-                    <li style="float: none;">New ZBPM UI</li>
-                    <li style="float: none;">Bugfixes</li>
-                    <li style="float: none;">Kernerl Panic on Exit fix</li>
-                    <li style="float: none;">SSHD Failure Fixed</li>
-                    <li style="float: none;">Intel Driver Support</li>
-                    <li style="float: none;">Login Manager Fixed</li>
-                </ul>
-            </span>
-        </a>
-
-        <a href="#" style="font-size: 1.6rem;">Patchnotes Hotfix
-        <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.0hf</span>
-            <span style="display: block; font-size: 1rem; color: #9b59b6;">
-                <ul style="list-style: disc; padding-left: 15px;">
-                    <li style="float: none;">ZBPM Update</li>
-                    <li style="float: none;">Root auto Login</li>
-                    <li style="float: none;">Kernel 7.0.2</li>
-                    <li style="float: none;"></li>
-                    <li style="float: none;"></li>
-                    <li style="float: none;"></li>
-                    <li style="float: none;"></li>
-                    <li style="float: none;"></li>
-                    <li style="float: none;"></li>
-                </ul>
-            </span>
-        </a>
-
-        <a href="#" style="font-size: 1.6rem;">Patchnotes Experimental
-        <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.0le</span>
-            <span style="display: block; font-size: 1rem; color: #9b59b6;">
-                <ul style="list-style: disc; padding-left: 15px;">
-                    <li style="float: none;">Augenkrebs Hinzugefügt</li>
-                    <li style="float: none;"></li>
-                    <li style="float: none;"></li>
-                    <li style="float: none;"></li>
-                    <li style="float: none;"></li>
-                    <li style="float: none;"></li>
-                    <li style="float: none;"></li>
-                    <li style="float: none;"></li>
-                    <li style="float: none;"></li>
-                </ul>
-            </span>
-        </a>
-
-        <a href="#" style="font-size: 1.6rem;">Patchnotes Beta
-        <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.0be</span>
-            <span style="display: block; font-size: 1rem; color: #9b59b6;">
-                <ul style="list-style: disc; padding-left: 15px;">
-                    <li style="float: none;">Kernel 7.0.2</li>
-                    <li style="float: none;">XFCE4-Desktop Live Enviroment</li>
-                    <li style="float: none;">Calamares Installer</li>
-                    <li style="float: none;"></li>
-                    <li style="float: none;"></li>
-                    <li style="float: none;"></li>
-                    <li style="float: none;"></li>
-                    <li style="float: none;"></li>
-                    <li style="float: none;"></li>
-                </ul>
-            </span>
-        </a>
-
-      </div>
-      </div>
-
-
-
-
-
-    </div>
-  </div>
-</div>
-
-  <div style="background: #12001a;
-padding: 80px 30px;
-min-height: 1400px;">
-
-    <section class="info" id="info">
-    <article class="info-panel">
-        <div>
-            <h3>Open Source</h3>
-            <p class="meta">Zenbyte OS is a Open source Linux OS</p>
-        </div>
-    </article>
-
-    </section>
-
-
-  <h2 style="font: bolder;
-  font-size: xx-large;
-  color: #9b59b6;">
-  All Stable Releases</h2>
-<section class="download-grid" id="releases">
-        <article class="download-card">
-            <div>
-                <h2>Zenbyte OS 1.0 Stable</h2>
-                <p class="meta">Fully tested and production-ready. Recommended for all users.</p>
+                        <div class="dropdown-content">
+                            <a href="https://zbpm.cronodevelopment.com/ZenbyteOS-2.0b.iso"><i class="fa-solid fa-download"></i> Latest Beta
+                                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 2.0b</span>
+                            </a>
+                            <a href="https://zbpm.cronodevelopment.com/ZenbyteOS-1.0.iso"><i class="fa-solid fa-download"></i> Latest Stable
+                                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.0</span>
+                            </a>
+                            <a href="https://zbpm.cronodevelopment.com/ZenbyteOS-1.0hf.iso"><i class="fa-solid fa-download"></i> Latest Hotfix
+                                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.0hf</span>
+                            </a>
+                            <a href="https://zbpm.cronodevelopment.com/ZenbyteOS-1.1le.iso"><i class="fa-solid fa-download"></i> Latest Experimental
+                                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.1le</span>
+                            </a>
+                            <a href="#"><i class="fa-solid fa-download"></i> Latest (Spin Name)
+                                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">NA</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown-wrapper">
+                        <form action="ZenbyteOS-Release.html#info">
+                            <form action="ZenbyteOS-Patchnotes.html">
+                                <button type="submit" class="ButtonstyleHeader">DOCS</button>
+                        </form>
+                        <div class="dropdown-content">
+                            <a href="#" style="font-size: 1.6rem;">Patchnotes Stable
+                                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.0</span>
+                                <span style="display: block; font-size: 1rem; color: #9b59b6;">
+                                    <ul style="list-style: disc; padding-left: 15px;">
+                                        <li style="float: none;">LXDM Fix</li>
+                                        <li style="float: none;">ZBPM Updated</li>
+                                        <li style="float: none;">New Installer UI</li>
+                                        <li style="float: none;">New ZBPM UI</li>
+                                        <li style="float: none;">Bugfixes</li>
+                                        <li style="float: none;">Kernerl Panic on Exit fix</li>
+                                        <li style="float: none;">SSHD Failure Fixed</li>
+                                        <li style="float: none;">Intel Driver Support</li>
+                                        <li style="float: none;">Login Manager Fixed</li>
+                                    </ul>
+                                </span>
+                            </a>
+                            <a href="#" style="font-size: 1.6rem;">Patchnotes Hotfix
+                                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.0hf</span>
+                                <span style="display: block; font-size: 1rem; color: #9b59b6;">
+                                    <ul style="list-style: disc; padding-left: 15px;">
+                                        <li style="float: none;">ZBPM Update</li>
+                                        <li style="float: none;">Root auto Login</li>
+                                        <li style="float: none;">Kernel 7.0.2</li>
+                                        <li style="float: none;"></li>
+                                        <li style="float: none;"></li>
+                                        <li style="float: none;"></li>
+                                        <li style="float: none;"></li>
+                                        <li style="float: none;"></li>
+                                        <li style="float: none;"></li>
+                                    </ul>
+                                </span>
+                            </a>
+                            <a href="#" style="font-size: 1.6rem;">Patchnotes Experimental
+                                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.0le</span>
+                                <span style="display: block; font-size: 1rem; color: #9b59b6;">
+                                    <ul style="list-style: disc; padding-left: 15px;">
+                                        <li style="float: none;">Augenkrebs Hinzugefügt</li>
+                                        <li style="float: none;"></li>
+                                        <li style="float: none;"></li>
+                                        <li style="float: none;"></li>
+                                        <li style="float: none;"></li>
+                                        <li style="float: none;"></li>
+                                        <li style="float: none;"></li>
+                                        <li style="float: none;"></li>
+                                        <li style="float: none;"></li>
+                                    </ul>
+                                </span>
+                            </a>
+                            <a href="#" style="font-size: 1.6rem;">Patchnotes Beta
+                                <span style="display: block; font-size: 0.75rem; color: #9b59b6;">Version 1.0be</span>
+                                <span style="display: block; font-size: 1rem; color: #9b59b6;">
+                                    <ul style="list-style: disc; padding-left: 15px;">
+                                        <li style="float: none;">Kernel 7.0.2</li>
+                                        <li style="float: none;">XFCE4-Desktop Live Enviroment</li>
+                                        <li style="float: none;">Calamares Installer</li>
+                                        <li style="float: none;"></li>
+                                        <li style="float: none;"></li>
+                                        <li style="float: none;"></li>
+                                        <li style="float: none;"></li>
+                                        <li style="float: none;"></li>
+                                        <li style="float: none;"></li>
+                                    </ul>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a class="button-download" href="https://zbpm.cronodevelopment.com/ZenbyteOS-1.0.iso">
-                <i class="fa-solid fa-download"></i>
-                Download ISO
-            </a>
-        </article>
-        <article class="download-card">
-            <div>
-                <h2>Zenbyte OS 2.0 Stable</h2>
-                <p class="meta">Latest version Fully tested and production-ready. Recommended for all users.</p>
+        </div>
+        <div style="background: #0f071a;
+        max-width: 1200px;
+        box-sizing: border-box;
+        padding: 80px 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 1400px;" center="true">
+
+            <section class="info" id="info">
+                <article class="info-panel">
+                    <div>
+                        <h3>Open Source</h3>
+                        <p class="meta">Zenbyte OS is a Open source Linux OS</p>
+                    </div>
+                </article>
+            </section>
+
+            <h2 style="font: bolder;
+            font-size: xx-large;
+            color: #9b59b6;">
+            All Stable Releases</h2>
+            <section class="download-grid" id="releases">
+                <article class="download-card">
+                    <div>
+                        <h2>Zenbyte OS 1.0 Stable</h2>
+                        <p class="meta">Fully tested and production-ready. Recommended for all users.</p>
+                    </div>
+                    <a class="button-download" href="https://zbpm.cronodevelopment.com/ZenbyteOS-1.0.iso">
+                        <i class="fa-solid fa-download"></i>
+                        Download ISO
+                    </a>
+                </article>
+                <article class="download-card">
+                    <div>
+                        <h2>Zenbyte OS 2.0 Stable</h2>
+                        <p class="meta">Latest version Fully tested and production-ready. Recommended for all users.</p>
+                    </div>
+                    <a class="button-download" href="https://zbpm.cronodevelopment.com/ZenbyteOS-2.0b.iso">
+                        <i class="fa-solid fa-download"></i>
+                        Download ISO
+                    </a>
+                </article>
+            </section>
+        </div>
+
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <strong>GitHub</strong>
+                    <a href="https://github.com/Olivenda/Zenbyte-OS">Zenbyte-OS</a>
+                    <a href="https://github.com/senseicreeper2/ZenbyteOS-Web">ZenbyteOS-Web</a>
+                </div>
+                <div class="footer-col">
+                    <strong>Spins</strong>
+                    <a href="https://www.youtube.com/watch?v=Aq5WXmQQooo">Zenbyte-OS (Spin)</a>
+                </div>
+                <div class="footer-col">
+                    <strong>Support</strong>
+                    <a href="https://github.com/Olivenda/Zenbyte-OS">Project repository</a>
+                </div>
             </div>
-            <a class="button-download" href="https://zbpm.cronodevelopment.com/ZenbyteOS-2.0b.iso">
-                <i class="fa-solid fa-download"></i>
-                Download ISO
-            </a>
-        </article>
-    </section>
-</div>
-
-
-<footer>
-    <div class="footer-grid">
-        <div class="footer-col">
-            <strong>GitHub</strong>
-            <a href="https://github.com/Olivenda/Zenbyte-OS">Zenbyte-OS</a>
-            <a href="https://github.com/senseicreeper2/ZenbyteOS-Web">ZenbyteOS-Web</a>
-        </div>
-        <div class="footer-col">
-            <strong>Spins</strong>
-            <a href="https://www.youtube.com/watch?v=Aq5WXmQQooo">Zenbyte-OS (Spin)</a>
-        </div>
-        <div class="footer-col">
-            <strong>Support</strong>
-            <a href="https://github.com/Olivenda/Zenbyte-OS">Project repository</a>
-        </div>
-    </div>
-</footer>
-
-</body>
+        </footer>
+    </body>
 </html>
