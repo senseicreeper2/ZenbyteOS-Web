@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZenbyteOS Patchnotes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            color-scheme: dark;
+            color: #e3d5ff;
+            background: #0f071a;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #0f071a;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(18, 0, 26, 0.95);
+            border-bottom: 1px solid rgba(155, 89, 182, 0.2);
+            z-index: 999;
+        }
+
+        .top-bar {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .brand img {
+            height: 48px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            padding: 0.75rem 1rem;
+            border-radius: 0.625rem;
+            background: transparent;
+            color: #9b59b6;
+            border: none;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            background: #12001a;
+            color: #ffffff;
+        }
+
+        main {
+            margin-top: 90px;
+            padding: 2rem 1.5rem 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero {
+            display: grid;
+            gap: 1.5rem;
+            padding: 2.5rem;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, rgba(30, 0, 51, 0.85), rgba(18, 0, 26, 0.95));
+            border: 1px solid rgba(155, 89, 182, 0.25);
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 4rem);
+            line-height: 1.05;
+            color: #ffffff;
+        }
+
+        .hero p {
+            margin: 0.75rem 0 0;
+            max-width: 720px;
+            color: #d7c3ff;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .hero-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .hero-links a {
+            padding: 0.9rem 1.4rem;
+            border-radius: 999px;
+            background: rgba(155, 89, 182, 0.2);
+            color: #f4eaff;
+            border: 1px solid rgba(155, 89, 182, 0.4);
+            transition: background 0.2s ease;
+        }
+
+        .hero-links a:hover {
+            background: rgba(155, 89, 182, 0.45);
+        }
+
+        .download-grid {
+            display: grid;
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        .download-card {
+            padding: 1.5rem;
+            border-radius: 1rem;
+            background: rgba(18, 0, 26, 0.9);
+            border: 1px solid rgba(155, 89, 182, 0.2);
+            display: grid;
+            gap: 1rem;
+        }
+
+        .download-card h2 {
+            margin: 0;
+            font-size: 1.3rem;
+        }
+
+        .download-card .meta {
+            color: #b9a6f2;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .button-download {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem 1.4rem;
+            border-radius: 0.9rem;
+            background: rgba(155, 89, 182, 0.18);
+            color: #ffffff;
+            border: 1px solid #9b59b666;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.15s ease;
+            font-weight: 700;
+            width: fit-content;
+        }
+
+        .button-download:hover {
+            background: rgba(155, 89, 182, 0.4);
+            transform: translateY(-1px);
+        }
+
+        .info-panel {
+            margin-top: 2rem;
+            padding: 1.75rem;
+            background: rgba(18, 0, 26, 0.9);
+            border-radius: 1rem;
+            border: 1px solid rgba(155, 89, 182, 0.2);
+        }
+
+        .info-panel h3 {
+            margin-top: 0;
+            color: #d6bfff;
+            font-size: 1.4rem;
+        }
+
+        .info-panel p {
+            margin: 0.7rem;
+            line-height: 1.7;
+            margin-top: 0.1rem;
+        }
+        .info-panel li {
+            color: #c9b4f8;
+            line-height: 1.7;
+        }
+
+        .info-panel ul {
+            padding-left: 1.4rem;
+            margin: 0.75rem 0 0;
+            list-style: disc;
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding: 2rem 1.5rem;
+            background: #08030d;
+            border-top: 1px solid rgba(155, 89, 182, 0.15);
+        }
+
+        .footer-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-col {
+            display: grid;
+            gap: 0.5rem;
+            color: #9b59b6;
+            font-size: 0.95rem;
+        }
+
+        .footer-col a {
+            color: #c7b0ff;
+        }
+
+        @media (min-width: 880px) {
+            .download-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 640px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .hero {
+                padding: 1.5rem;
+            }
+
+            .hero-links {
+                justify-content: start;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="top-bar">
+        <a class="brand" href="ZenbyteOS-Web.html">
+            <img src="ZenbyteOSLogo.png" alt="ZenbyteOS Logo">
+            <span>ZenbyteOS</span>
+        </a>
+        <nav class="nav-links">
+            <a href="ZenbyteOS-Release.html">Download</a>
+            <a href="ZenbyteOS-Patchnotes.html">Docs</a>
+            <a href="https://github.com/Olivenda/Zenbyte-OS">GitHub</a>
+        </nav>
+    </div>
+</header>
+<main>
+
+
+    <section class="info-panel" id="info">
+        <h3>Patchnotes</h3>
+        <p>Version 1.0 Stable</p>
+        <ul>
+            <li style="float: none;">LXDM Fix</li>
+            <li style="float: none;">ZBPM Updated</li>
+            <li style="float: none;">New Installer UI</li>
+            <li style="float: none;">New ZBPM UI</li>
+            <li style="float: none;">Bugfixes</li>
+            <li style="float: none;">Kernerl Panic on Exit fix</li>
+            <li style="float: none;">SSHD Failure Fixed</li>
+            <li style="float: none;">Intel Driver Support</li>
+            <li style="float: none;">Login Manager Fixed</li>            
+        </ul>
+    </section>
+
+    <section class="info-panel" id="info">
+        <h3>Patchnotes</h3>
+        <p>Version 2.0b</p>
+        <ul>
+            <li style="float: none;">Kernel 7.0.2</li>
+            <li style="float: none;">XFCE4-Desktop Live Enviroment</li>
+            <li style="float: none;">Calamares Installer</li>
+        </ul>
+    </section>
+</main>
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <strong>GitHub</strong>
+            <a href="https://github.com/Olivenda/Zenbyte-OS">Zenbyte-OS</a>
+            <a href="https://github.com/senseicreeper2/ZenbyteOS-Web">ZenbyteOS-Web</a>
+        </div>
+        <div class="footer-col">
+            <strong>Spins</strong>
+            <a href="https://www.youtube.com/watch?v=Aq5WXmQQooo">Zenbyte-OS (Spin)</a>
+        </div>
+        <div class="footer-col">
+            <strong>Support</strong>
+            <a href="https://github.com/Olivenda/Zenbyte-OS">Project repository</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
